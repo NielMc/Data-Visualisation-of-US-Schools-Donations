@@ -10,7 +10,7 @@ MONGODB_PORT = 27017
 DBS_NAME = 'donorsUSA'
 COLLECTION_NAME = 'projects'
 FIELDS = {'funding_status': True, 'school_state': True, 'resource_type': True, 'poverty_level': True,
-          'date_posted': True, 'total_donations': True, '_id': False}
+          'date_posted': True, 'total_donations': True, 'school_metro': True,'_id': False}
 
 
 @app.route("/")
@@ -22,7 +22,7 @@ def index():
 def donor_projects():
     connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
     collection = connection[DBS_NAME][COLLECTION_NAME]
-    projects = collection.find(projection=FIELDS, limit=55000)
+    projects = collection.find(projection=FIELDS, limit=100000)
     json_projects = []
     for project in projects:
         json_projects.append(project)
