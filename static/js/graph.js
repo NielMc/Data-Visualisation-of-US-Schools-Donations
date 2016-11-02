@@ -8,10 +8,12 @@ function makeGraphs(error, projectsJson, statesJson) {
     //Clean projectsJson data
     var donorsUSProjects = projectsJson;
     var dateFormat = d3.time.format("%Y-%m-%d %H:%M:%S");
+    var numberFormat = d3.format('.2f');
     donorsUSProjects.forEach(function (d) {
         d["date_posted"] = dateFormat.parse(d["date_posted"]);
         d["date_posted"].setDate(1);
         d["total_donations"] = +d["total_donations"];
+
     });
 
 
@@ -78,6 +80,7 @@ function makeGraphs(error, projectsJson, statesJson) {
     var fundingStatusChart = dc.pieChart("#funding-chart");
     var fundingStatusmap = dc.geoChoroplethChart("#funding-map");
     var fundingMetroChart = dc.pieChart("#metro-chart");
+    // var yearlyBubbleChart = dc.bubbleChart('#yearly-bubble-chart');
 
 
     selectField = dc.selectMenu('#menu-select')
@@ -141,6 +144,70 @@ function makeGraphs(error, projectsJson, statesJson) {
         .transitionDuration(1500)
         .dimension(metroDim)
         .group(numMetro);
+
+ //  var yearlyPerformanceGroup = dateDim.group().reduce(
+ //    function () {
+ //            return {
+ //                count: 0,
+ //                absGain: 10,
+ //                fluctuation: 0,
+ //                fluctuationPercentage: 50,
+ //                sumIndex: 0,
+ //                avgIndex: 0,
+ //                percentageGain: 70
+ //            };
+ // }
+ //    );
+ //
+ //    yearlyBubbleChart
+ //        .width(990)
+ //        .height(250)
+ //        .transitionDuration(1500)
+ //        .margins({top: 10, right: 50, bottom: 30, left: 40})
+ //        .dimension(dateDim)
+ //        .group(numProjectsByDate)
+ //        .colors(["#E2F2FF", "#C4E4FF", "#9ED2FF", "#81C5FF", "#6BBAFF", "#51AEFF", "#36A2FF", "#1E96FF", "#0089FF", "#7C151D"])
+ //        .colorDomain([-500, 500])
+ //        .colorAccessor(function (d) {
+ //            return d.value.absGain;
+ //        })
+ //        .keyAccessor(function (p) {
+ //            return p.value.absGain;
+ //        })
+ //        .valueAccessor(function (p) {
+ //            return p.value.percentageGain;
+ //        })
+ //        .radiusValueAccessor(function (p) {
+ //            return p.value.fluctuationPercentage;
+ //        })
+ //        .maxBubbleRelativeSize(0.3)
+ //        .x(d3.scale.linear().domain([-2500, 2500]))
+ //        .y(d3.scale.linear().domain([-100, 100]))
+ //        .r(d3.scale.linear().domain([0, 4000]))
+ //        .elasticY(true)
+ //        .elasticX(true)
+ //        .yAxisPadding(100)
+ //        .xAxisPadding(500)
+ //        .renderHorizontalGridLines(true)
+ //        .renderVerticalGridLines(true)
+ //        .xAxisLabel('Index Gain')
+ //        .yAxisLabel('Index Gain %')
+ //        .renderLabel(true)
+ //        .label(function (p) {
+ //            return p.key;
+ //        })
+ //        .renderTitle(true)
+ //        .title(function (p) {
+ //            return [
+ //                p.key,
+ //                'Index Gain: ' + numberFormat(p.value.absGain),
+ //                'Index Gain in Percentage: ' + numberFormat(p.value.percentageGain) + '%',
+ //                'Fluctuation / Index Ratio: ' + numberFormat(p.value.fluctuationPercentage) + '%'
+ //            ].join('\n');
+ //        })
+ //        .yAxis().tickFormat(function (v) {
+ //            return v + '%';
+ //        });
 
     fundingStatusmap.width(1000)
         .height(330)

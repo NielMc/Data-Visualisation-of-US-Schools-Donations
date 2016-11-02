@@ -26,76 +26,81 @@
 
     <div class="row">
 
-        <div class="col-sm-8">
+        <div class="col-sm-6">
             <div class="row">
                 <div class="chart-wrapper">
                     <div class="chart-title">
                         Total Donations by state
                     </div>
                     <div class="chart-stage">
-                        <div id="funding-map" data-step="8"
+                        <div id="funding-map" data-step="1"
                              data-intro="Mapping donations by state"
-                             style="font-weight: normal" data-position="left"></div>
+                             style="font-weight: normal" data-position="right"></div>
                     </div>
                 </div>
-                <!-- Time Chart -->
-                <div class="col-sm-12">
-                    <div class="chart-wrapper">
-                        <div class="chart-title">
-                            Number of Donations
-                        </div>
-                        <div class="chart-stage">
-                            <div id="time-chart" data-step="1" data-intro="The Time Chart"
-                                 style="font-weight: normal" data-position="right"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Time Chart -->
-
-                <!-- Resources -->
-                <div class="col-sm-6">
-                    <div class="chart-wrapper">
-                        <div class="chart-title">
-                            Resources Type
-                        </div>
-                        <div class="chart-stage">
-                            <div id="resource-type-row-chart" data-step="2" data-intro="The Time Chart"
-                                 style="font-weight: normal" data-position="right"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Resources -->
-
-
-                <!-- funding Pie -->
-                <div class="col-sm-6">
-                    <div class="chart-wrapper">
-                        <div class="chart-title">
-                            Funding Status
-                        </div>
-                        <div class="chart-stage">
-                            <div id="funding-chart" data-step="3" data-intro="The Time Chart"
-                                 style="font-weight: normal" data-position="right"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- funding Pie -->
-                <!-- funding Pie -->
-                <div class="col-sm-6">
-                    <div class="chart-wrapper">
-                        <div class="chart-title">
-                            Funding by metro
-                        </div>
-                        <div class="chart-stage">
-                            <div id="metro-chart" data-step="4" data-intro="The Time Chart"
-                                 style="font-weight: normal" data-position="right"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- funding Pie -->
-
             </div>
         </div>
+    </div>
+    <div class="row">
+        <!-- Time Chart -->
+        <div class="col-sm-12">
+            <div class="chart-wrapper">
+                <div class="chart-title">
+                    Number of Donations
+                </div>
+                <div class="chart-stage">
+                    <div id="time-chart" data-step="2" data-intro="Donations plotted by time"
+                         style="font-weight: normal" data-position="right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Time Chart -->
+    <div class="row">
+        <!-- Resources -->
+        <div class="col-sm-6">
+            <div class="chart-wrapper">
+                <div class="chart-title">
+                    Resources Type
+                </div>
+                <div class="chart-stage">
+                    <div id="resource-type-row-chart" data-step="3" data-intro="Type of project supported"
+                         style="font-weight: normal" data-position="right"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Resources -->
+
+
+        <!-- funding Pie -->
+        <div class="col-sm-6">
+            <div class="chart-wrapper">
+                <div class="chart-title">
+                    Funding Status
+                </div>
+                <div class="chart-stage">
+                    <div id="funding-chart" data-step="4" data-intro="Status of the funding application"
+                         style="font-weight: normal" data-position="right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <!-- funding Pie -->
+        <!-- funding Pie -->
+        <div class="col-sm-6">
+            <div class="chart-wrapper">
+                <div class="chart-title">
+                    Funding by metro
+                </div>
+                <div class="chart-stage">
+                    <div id="metro-chart" data-step="5" data-intro="Funding by region"
+                         style="font-weight: normal" data-position="right"></div>
+                </div>
+            </div>
+        </div>
+        <!-- funding Pie -->
+
 
         <!-- Poverty -->
         <div class="col-sm-3">
@@ -104,7 +109,8 @@
                     Poverty Level
                 </div>
                 <div class="chart-stage">
-                    <div id="poverty-level-row-chart" data-step="5" data-intro="The Time Chart"
+                    <div id="poverty-level-row-chart" data-step="6"
+                         data-intro="Funding by region's poverty measures"
                          style="font-weight: normal" data-position="left"></div>
                 </div>
             </div>
@@ -113,19 +119,20 @@
 
 
         <!-- menu select -->
-        <div class="col-sm-6">
+        <div class="col-sm-3">
             <div class="chart-wrapper">
                 <div class="chart-title">
                     Donation State
                 </div>
                 <div class="chart-stage">
-                    <div id="menu-select" data-step="6" data-intro="The Time Chart"
+                    <div id="menu-select" data-step="7" data-intro="Select a state to see it's data"
                          style="font-weight: normal" data-position="right"></div>
                 </div>
             </div>
         </div>
-        <!-- menu select -->
-
+    </div>
+    <!-- menu select -->
+    <div class="row">
         <!-- Metric 1 -->
         <div class="col-sm-2">
             <div class="chart-wrapper">
@@ -140,7 +147,7 @@
                    text-align: center;
                    padding-top: 12px;
                    padding-bottom: 0px;">
-                    <div id="number-projects-nd" data-step="7" data-intro="The Time Chart"
+                    <div id="number-projects-nd" data-step="8" data-intro="This is the number of donations...."
                          style="font-weight: normal" data-position="right"></div>
                 </div>
             </div>
@@ -154,7 +161,20 @@
                     Total Donations in USD
                 </div>
                 <div class="chart-stage">
-                    <div id="total-donations-nd" data-step="8" data-intro="The Time Chart"
+                    <div id="total-donations-nd" data-step="9" data-intro="...and this is the dollar value."
+                         style="font-weight: normal" data-position="left"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Metric 2 -->
+        <!-- Metric 2 -->
+        <div class="col-sm-2">
+            <div class="chart-wrapper">
+                <div class="chart-title">
+                    Bubble Chart
+                </div>
+                <div class="chart-stage">
+                    <div id="yearly-bubble-chart" data-step="10" data-intro="The Time Chart"
                          style="font-weight: normal" data-position="left"></div>
                 </div>
             </div>
@@ -162,12 +182,11 @@
         <!-- Metric 2 -->
 
     </div>
+
+    <hr>
+    <p class="small text-muted"> Data viz &#9829; from Code Institute</a></p>
 </div>
 
-<hr>
-<p class="small text-muted"> Data viz &#9829; from Code Institute</a></p>
-
-</div>
 <script src="../static/lib/js/jquery.min.js"></script>
 <script src="../static/lib/js/bootstrap.min.js"></script>
 <script src="../static/lib/js/crossfilter.js"></script>
