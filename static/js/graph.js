@@ -105,7 +105,7 @@ function makeGraphs(error, projectsJson, statesJson) {
 
     timeChart
         .width(800)
-        .height(200)
+        .height(330)
         .margins({top: 10, right: 50, bottom: 30, left: 50})
         .dimension(dateDim)
         .group(numProjectsByDate)
@@ -130,7 +130,7 @@ function makeGraphs(error, projectsJson, statesJson) {
         .xAxis().ticks(4);
 
     fundingStatusChart
-        .height(220)
+        .height(250)
         .radius(90)
         .innerRadius(40)
         .transitionDuration(1500)
@@ -138,7 +138,7 @@ function makeGraphs(error, projectsJson, statesJson) {
         .group(numProjectsByFundingStatus);
 
     fundingMetroChart
-        .height(220)
+        .height(250)
         .radius(90)
         .innerRadius(40)
         .transitionDuration(1500)

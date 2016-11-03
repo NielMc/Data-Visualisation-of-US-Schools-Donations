@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../static/lib/css/dc.css">
     <link rel="stylesheet" href="../static/css/custom.css">
     <link rel="stylesheet" href="../static/lib/css/introjs.css">
+    <link rel="shortcut icon" href= {{ url_for('static', filename='images/favicon.ico') }}>
 
 </head>
 <body class="application">
@@ -14,7 +15,7 @@
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="./">School Donations Dashboard</a>
+            <a class="navbar-brand" href="index.html">School Donations Dashboard</a>
             <button class="intro_button" type="button" autofocus onclick="javascript:introJs().start();">Start Tour!
             </button>
         </div>
@@ -26,24 +27,24 @@
 
     <div class="row">
 
-        <div class="col-sm-6">
-            <div class="row">
-                <div class="chart-wrapper">
-                    <div class="chart-title">
-                        Total Donations by state
-                    </div>
-                    <div class="chart-stage">
-                        <div id="funding-map" data-step="1"
-                             data-intro="Mapping donations by state"
-                             style="font-weight: normal" data-position="right"></div>
-                    </div>
+        <div class="col-sm-4">
+
+            <div class="chart-wrapper">
+                <div class="chart-title">
+                    Total Donations by state
+                </div>
+                <div class="chart-stage">
+                    <div id="funding-map" data-step="1"
+                         data-intro="Mapping donations by state"
+                         style="font-weight: normal" data-position="right"></div>
                 </div>
             </div>
+
         </div>
-    </div>
-    <div class="row">
+
+
         <!-- Time Chart -->
-        <div class="col-sm-12">
+        <div class="col-sm-6">
             <div class="chart-wrapper">
                 <div class="chart-title">
                     Number of Donations
@@ -58,7 +59,7 @@
     <!-- Time Chart -->
     <div class="row">
         <!-- Resources -->
-        <div class="col-sm-6">
+        <div class="col-sm-3">
             <div class="chart-wrapper">
                 <div class="chart-title">
                     Resources Type
@@ -73,7 +74,7 @@
 
 
         <!-- funding Pie -->
-        <div class="col-sm-6">
+        <div class="col-sm-3">
             <div class="chart-wrapper">
                 <div class="chart-title">
                     Funding Status
@@ -88,7 +89,7 @@
     <div class="row">
         <!-- funding Pie -->
         <!-- funding Pie -->
-        <div class="col-sm-6">
+        <div class="col-sm-3">
             <div class="chart-wrapper">
                 <div class="chart-title">
                     Funding by metro
