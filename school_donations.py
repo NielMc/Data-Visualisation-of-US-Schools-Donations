@@ -9,8 +9,8 @@ app = Flask(__name__)
 MONGODB_HOST = 'localhost'
 MONGODB_PORT = 27017
 MONGODB_URI = os.getenv('MONGODB_URI')
-DBS_NAME = 'donorsUSA'
-COLLECTION_NAME = 'projects'
+DBS_NAME = os.getenv('MONGO_DB_NAME')
+COLLECTION_NAME = 'opendata_projects_clean'
 FIELDS = {'funding_status': True, 'school_state': True, 'resource_type': True, 'poverty_level': True,
           'date_posted': True, 'total_donations': True, 'school_metro': True,'_id': False}
 
