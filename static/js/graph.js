@@ -166,15 +166,5 @@ function makeGraphs(error, projectsJson, statesJson) {
 
     dc.renderAll();
 
-    function AddXAxis(chartToUpdate, displayText)
-{
-    chartToUpdate.svg()
-                .append("text")
-                .attr("class", "x-axis-label")
-                .attr("text-anchor", "middle")
-                .attr("x", chartToUpdate.width()/2)
-                .attr("y", chartToUpdate.height()-3.5)
-                .text(displayText);
-}
-AddXAxis(povertyLevelChart, "This is the x-axis!");
+
 }
